@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamX - Your Favorite Streaming Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-gray-900 text-white" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+    <header class="bg-gray-800 p-4 flex justify-between items-center" data-aos="fade-down">
+        <h1 class="text-3xl font-bold">StreamX</h1>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Movies</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Series</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Pricing</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6" data-aos="fade-up">
+        <h2 class="text-5xl font-extrabold mb-4">Unlimited Movies, TV Shows & More</h2>
+        <p class="text-lg mb-6">Watch anywhere. Cancel anytime.</p>
+        <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+            <input type="email" placeholder="Enter your email" class="p-3 rounded-lg text-black w-80" data-aos="fade-right">
+            <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-lg text-xl font-bold hover:bg-yellow-300" data-aos="fade-left">Start Watching</a>
+        </div>
+    </section>
+    
+    <section class="p-10" data-aos="fade-up">
+        <h3 class="text-3xl font-bold text-center mb-6">Trending Now</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-gray-700 p-4 rounded-lg" data-aos="zoom-in">Movie 1</div>
+            <div class="bg-gray-700 p-4 rounded-lg" data-aos="zoom-in">Movie 2</div>
+            <div class="bg-gray-700 p-4 rounded-lg" data-aos="zoom-in">Movie 3</div>
+            <div class="bg-gray-700 p-4 rounded-lg" data-aos="zoom-in">Movie 4</div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 p-6 text-center">
+        <p>&copy; 2025 StreamX. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
