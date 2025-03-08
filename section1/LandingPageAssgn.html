@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetStream - Your Favorite Streaming Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-fuchsia-200" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+    <header class="bg-fuchsia-950  flex justify-between items-center py-4 px-2" data-aos="fade-down" data-aos-duration="2000">
+        <div class="flex justify-start items-center h-[40px] space-x-1">
+        <img src="NetStream.png" class="h-[150px] w-[40%] mt-8" alt="">
+        <h1 class="text-3xl text-white font-bold">NetStream</h1>
+        <button id="menu-toggle" class="md:hidden text-3xl font-bold">☰</button>
+
+        </div>
+        <div class="flex justify-end">
+        <nav>
+            <ul id="menu" class="hidden md:flex font-bold space-x-6 flex-col md:flex-row md:space-x-6 md:items-center absolute md:static top-16 text-xl text-white left-0 w-full md:w-auto text-center md:text-left">
+
+                <li class="p-2 md:p-0"><a href="#" class="hover:text-fuchsia-200">Home</a></li>
+                <li class="p-2 md:p-0"><a href="#" class="hover:text-fuchsia-200">Movies</a></li>
+                <li class="p-2 md:p-0"><a href="#" class="hover:text-fuchsia-200">Series</a></li>
+                <li class="p-2 md:p-0"><a href="#" class="hover:text-fuchsia-200">Pricing</a></li>
+                <li class="p-2 md:p-0"><button class="hover:text-black btn rounded-lg py-2 px-5 hover:bg-fuchsia-400 bg-fuchsia-700 ">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section class="h-screen flex text-white flex-col justify-center  items-center text-center px-6" style="background-image: url('mov.jpg'); background-repeat: no-repeat; background-size: cover;" data-aos="fade-up" data-aos-duration="2000">
+        <h2 class="text-5xl font-extrabold rounded-lg md:bg-black md:bg-opacity-50 md:p-5 p-4">Unlimited Movies, TV Shows & More</h2>
+        <p class="text-lg  md:bg-black rounded-lg md:bg-opacity-50 md:p-3 p-4">Watch anywhere. Cancel anytime.</p>
+        <div class="flex flex-col rounded-lg md:bg-black md:bg-opacity-50 md:p-5 md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 p-4">
+            <input type="email" placeholder="Enter your email" class="p-3 rounded-lg text-black w-60 md:w-80" data-aos="fade-up" data-aos-duration="2000">
+            <a href="#" class="bg-fuchsia-700 text-white px-6 py-3 rounded-lg text-xl font-bold hover:bg-fuchsia-400 hover:text-black" data-aos="fade-up" data-aos-duration="2000">Start Watching</a>
+        </div>
+    </section>
+    <section class="p-10" data-aos="fade-up" data-aos-duration="2000">
+        <h3 class="text-4xl font-extrabold rounded-lg bg-fuchsia-800  bg-opacity-60 md:p-5  text-center mb-6">TRENDING NOW</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 flex items-center">
+            <div class="  p-4 rounded-lg  justify-items-center relative " data-aos="zoom-in"><img src="pushpa2.jpeg"  class="md:h-[250px]  rounded-lg  object-contain transition-transform duration-300 hover:scale-150 "><h1 class="text-4xl font-extrabold ">#1</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="nadaaniya.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#2</h1></div>
+            <div class=" p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="daaku maharaj.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#3</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="squidgame.jpeg"  class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 "alt=""><h1 class="text-4xl font-extrabold ">#4</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="thandel.jpeg"  class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 "alt=""><h1 class="text-4xl font-extrabold ">#5</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="dabbacartel.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#6</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="dhoomdham.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#7</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="luckybhasskar.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#8</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="bhoolbhulaiya.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#9</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="skyforce.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#10</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="fateh.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#11</h1></div>
+            <div class="  p-4 rounded-lg  justify-items-center" data-aos="zoom-in"><img src="deva.jpeg" class="md:h-[250px] rounded-lg  object-contain transition-transform duration-300 hover:scale-150 " alt=""><h1 class="text-4xl font-extrabold ">#12</h1></div>
+
+        </div>
+    </section>
+    <section class="p-10" data-aos="fade-up" data-aos-duration="2000">
+        <h3 class="text-4xl font-bold rounded-lg bg-fuchsia-800  bg-opacity-60 md:p-5  mb-6 p-3">More reasons to join</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+            <div class=" p-6 rounded-lg shadow-lg bg-fuchsia-700  bg-opacity-30" data-aos="flip-left">
+                <h4 class="text-xl font-bold rounded-lg mb-6">Enjoy on your TV</h3>
+                <p class="text-lg ">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                <h4 class="mt-4 font-bold"></h4>
+            </div>
+            <div class=" p-6 rounded-lg shadow-lg bg-fuchsia-700  bg-opacity-30" data-aos="flip-left">
+                <h4 class="text-xl font-bold rounded-lg mb-6">Download your shows to watch offline</h3>
+                <p class="text-lg ">Save your favourites easily and always have something to watch.</p>
+                <h4 class="mt-4 font-bold"></h4>
+            </div>
+            <div class=" p-6 rounded-lg shadow-lg bg-fuchsia-700  bg-opacity-30" data-aos="flip-left">
+                <h4 class="text-xl font-bold rounded-lg mb-6">Watch everywhere</h3>
+                <p class="text-lg ">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                <h4 class="mt-4 font-bold"></h4>
+            </div>
+            <div class=" p-6 rounded-lg shadow-lg bg-fuchsia-700  bg-opacity-30" data-aos="flip-left">
+                <h4 class="text-xl font-bold rounded-lg mb-6">Create profiles for kids</h3>
+                <p class="text-lg ">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+                <h4 class="mt-4 font-bold"></h4>
+            </div>
+            
+        </div>
+    </section>
+    
+    <footer class="bg-fuchsia-950 text-white py-10">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h2 class="text-xl font-bold mb-4">Address</h2>
+            <p>Hazratganj</p>
+            <p>Lucknow-226020, India</p>
+            <p>Email: abcd@gmail.com</p>
+            <p>Phone: +111 222 3333</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+            <ul class=" space-y-2">
+              <li ><a href="#" class="hover:text-gray-400"><i class="fa-solid fa-house"></i> Home</a></li>
+              <li><a href="#" class="hover:text-gray-400"><i class="fa-solid fa-message"></i> About Us</a></li>
+              <li><a href="#" class="hover:text-gray-400"><i class="fa-solid fa-mobile"></i> Services</a></li>
+              <li><a href="#" class="hover:text-gray-400"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold mb-4">Follow Us</h2>
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i> Twitter</a>
+              <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="text-center border-t border-gray-700 mt-8 pt-4">
+          <p>© 2024 YourCompany. All rights reserved.</p>
+        </div>
+      </footer>
+      
+      <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+      
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000 
+        });
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
