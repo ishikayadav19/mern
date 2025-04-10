@@ -1,8 +1,10 @@
 const { Schema,model} = require('../connection'); // import the connection //schema class=> structure, model=>function hota h
 const mySchema = new Schema({
     name: String ,
-    email: {type:String, uniques:true},
+    email: {type:String, unique:true},
     password: {type:String, required:true},
+   
+    city:{type:String, default: "unknown"},
     createdAt: {type:Date, default: Date.now},
 }) //schema class ka object bna rhe h
 

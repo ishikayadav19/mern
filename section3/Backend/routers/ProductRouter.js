@@ -1,11 +1,9 @@
 const express = require('express');
-const Model = require('../models/UserModels'); // import the model
-
+const Model = require('../models/ProductModels'); // import the model
 const router= express.Router();
 
 router.post('/add' , (req, res) => {
     console.log(req.body);
-    
     new Model(req.body).save()
     .then((result) => {
         res.status(200).json(result);
@@ -28,8 +26,8 @@ router.get('/getall', (req, res) =>{
 
 
 //: denotes url parameter
-router.get('/getbycity/:city', (req, res)=>{
-   Model.find({city : req.params.city})
+router.get('/getbyName/:Name', (req, res)=>{
+   Model.find({ProductName : req.params.city})
  .then((result) => {
     res.status(200).json(result);
  })

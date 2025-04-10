@@ -8,6 +8,8 @@ import 'ldrs/react/Infinity.css'
 
 import * as Yup from 'yup';
 import React from 'react'
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const SignupSchema = Yup.object().shape({  //structure define krte h
   name: Yup.string()
@@ -40,18 +42,32 @@ const signup = () => {
 
       },
       // event
-      onSubmit: (values, { resetForm, setSubmitting }) => {
+      onSubmit: async (values, { resetForm, setSubmitting }) => {
         console.log(values);
-        setTimeout(() => {
-          //  resetForm();
-          setSubmitting(false);
-        }, 3000);
+       try {
+         const res = await axios.post(
+           `${process.env.NEXT_PUBLIC_API_URL}/user/add`, 
+           values);
+           console.log(res.data);
+           console.log(res.status);
+           console.log(res.statusText);
+           toast.success('User registered Successfully!');
+       } 
+       catch (error) {
+        if(error?.response?.data?.code === 11000){ 
+          toast.error('User already exists!');
+        }
+        else {
+        toast.error('User registration failed!');
+        console.log(error);
+       }
         // resetForm();
         // send values to backend 
-      },
-      validationSchema: SignupSchema
+      }
+      // validationSchema: SignupSchema
     }
-  );
+  
+});
 
   return (
     <div>

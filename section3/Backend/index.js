@@ -4,10 +4,16 @@ require('dotenv').config(); //cannot be import direclty, import krne ke liye con
 const UserRouter = require('./routers/UserRouter')
 // initialize express
 const app = express();
+const cors = require('cors'); //importing cors package
 
 const port = process.env.PORT || 5000 ;//env variable ko import krne ke liye process.env krte h
 // middlewares
+app.use(cors({
+    origin: '*', //allow all domains to access the server
+    
+}))
 app.use(express.json()); // to parse the json data from the body of the request
+
 app.use('/user',UserRouter);
 // endpoint or routes
 app.get('/', (req, res) => {
