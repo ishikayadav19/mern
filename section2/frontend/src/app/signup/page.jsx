@@ -10,6 +10,8 @@ import * as Yup from 'yup';
 import React from 'react'
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+
 
 const SignupSchema = Yup.object().shape({  //structure define krte h
   name: Yup.string()
@@ -32,6 +34,7 @@ const SignupSchema = Yup.object().shape({  //structure define krte h
 const signup = () => {
   // initializing formik
   // hook
+  const router = useRouter()
   const signForm = useFormik(
     {
       initialValues: {
@@ -44,25 +47,23 @@ const signup = () => {
       // event
       onSubmit: async (values, { resetForm, setSubmitting }) => {
         console.log(values);
-       try {
-         const res = await axios.post(
-           `${process.env.NEXT_PUBLIC_API_URL}/user/add`, 
-           values);
-           console.log(res.data);
-           console.log(res.status);
-           console.log(res.statusText);
-           toast.success('User registered Successfully!');
-       } 
-       catch (error) {
-        if(error?.response?.data?.code === 11000){ 
-          toast.error('User already exists!');
-        }
-        else {
-        toast.error('User registration failed!');
+        try {
+          const res = await axios.post(
+              `${process.env.NEXT_PUBLIC_API_URL}/user/add`,
+              values
+          );
+          
+          console.log(res.data);
+          console.log(res.status);
+          console.log(res.statusText);
+          toast.success('User Registered Successfully!');
+
+          router.push('/login');
+          resetForm();
+      } catch (error) {
+        toast.error(error?.response?.data?.message);
         console.log(error);
-       }
-        // resetForm();
-        // send values to backend 
+        setSubmitting(false);
       }
       // validationSchema: SignupSchema
     }
@@ -180,7 +181,6 @@ const signup = () => {
                     <input
                       type="email"
                       id="email"
-
                       onChange={signForm.handleChange}
                       value={signForm.values.email}
                       className="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"

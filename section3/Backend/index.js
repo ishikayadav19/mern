@@ -2,6 +2,7 @@
 const express = require('express'); //package ka naam variable bna kr import kr dega
 require('dotenv').config(); //cannot be import direclty, import krne ke liye configure krna pdhta h en packages ko
 const UserRouter = require('./routers/UserRouter')
+const ProductRouter = require('./routers/ProductRouter')
 // initialize express
 const app = express();
 const cors = require('cors'); //importing cors package
@@ -15,6 +16,7 @@ app.use(cors({
 app.use(express.json()); // to parse the json data from the body of the request
 
 app.use('/user',UserRouter);
+app.use('/product',ProductRouter);
 // endpoint or routes
 app.get('/', (req, res) => {
 res.send("response from express")
